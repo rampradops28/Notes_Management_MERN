@@ -13,7 +13,7 @@ require('dotenv').config()
 const PORT = process.env.PORT || 3500
 
 // Connect to MongoDB
-connectDB()
+connectDB() 
 
 // Middleware
 app.use(cors(corsOptions))
