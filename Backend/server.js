@@ -20,6 +20,10 @@ app.use(cors(corsOptions))
 app.use(express.json())
 app.use(cookieParser())
 
+//routes
+app.use('/users', require('./routes/userRoutes'))
+app.use('/notes', require('./routes/noteRoutes'))
+
 // MongoDB connection event listeners
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB')
